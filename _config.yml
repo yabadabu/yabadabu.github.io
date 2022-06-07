@@ -2,3 +2,5 @@ theme: jekyll-theme-slate
 title: Geometry Flow
 description: Description of the personal project Geometry Flow 
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
