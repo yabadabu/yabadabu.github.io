@@ -35,6 +35,12 @@ This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
 E = mc^2
 ```
 
-```math
-This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+```cpp
+bool randomInt( int max_value );
+
+struct Sphere {
+  VEC3 center;
+  float radius;
+};
+
 ```
