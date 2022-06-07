@@ -7,5 +7,12 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 Hello world
 
-== Hello Again ==
+== Hello in 
 
+[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+
+== List
+
+- George Washington
+- John Adams
+- Thomas Jefferson
