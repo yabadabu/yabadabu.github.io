@@ -11,6 +11,8 @@ Hello world
 
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
+[First post](post_0022.md)
+
 # List
 
 - George Washington
@@ -28,3 +30,11 @@ Hello world
 ## More
 
 This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+
+```math
+E = mc^2
+```
+
+```math
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+```
