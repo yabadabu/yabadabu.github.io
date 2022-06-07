@@ -1,3 +1,4 @@
 theme: jekyll-theme-leap-day
 title: Geometry Flow
 description: Description of the personal project Geometry Flow 
+markdown: kramdown
