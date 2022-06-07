@@ -12,6 +12,7 @@ Hello world
 [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 
 [First post](post_0022.md)
+[Lost in space](post_0023.md)
 
 # List
 
