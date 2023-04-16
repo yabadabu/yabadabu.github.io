@@ -22,6 +22,48 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+## List
+
+- George Washington
+- John Adams
+- Thomas Jefferson
+
+> This is a quote
+
+### Math
+
+$$ \sqrt{3x-1}+(1+x)^2 $$
+
+{% katex %}
+c = \pm\sqrt{a^2 + b^2}
+{% endkatex %}
+
+{% katexmm %}
+This sentence uses delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+{% endkatexmm %}
+
+{% katexmm %}
+This is a mixed environment where you can have $a<0$ normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
+{% endkatexmm %}
+
+### Tasks
+
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+## More and more...
+
+```cpp
+bool randomInt( int max_value );
+
+struct Sphere {
+  VEC3 center;
+  float radius;
+};
+
+```
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
