@@ -4,6 +4,9 @@ title:  "Welcome to Jekyll!"
 date:   2023-04-16 20:20:17 +0200
 categories: jekyll update
 ---
+
+If we have one point A on the surface of a mesh, the geodesic distance to another point also on the surface of mesh B, is the length of the shortest path joining A to B, while still walking always over the surface of the mesh. Joining all the points which are at the same geodesic distance from a point creates the isolines of the following imagen:
+
 You’ll find this post in your `_posts` directory. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
