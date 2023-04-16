@@ -34,17 +34,9 @@ print_hi('Tom')
 
 $$ \sqrt{3x-1}+(1+x)^2 $$
 
-{% katex %}
-c = \pm\sqrt{a^2 + b^2}
-{% endkatex %}
+This sentence uses delimiters to show math inline:  $$ \sqrt{3x-1}+(1+x)^2 $$
 
-{% katexmm %}
-This sentence uses delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
-{% endkatexmm %}
-
-{% katexmm %}
-This is a mixed environment where you can have $a<0$ normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
-{% endkatexmm %}
+This is a mixed environment where you can have $$a<0$$ normal text and $$c = \pm\sqrt{a^2 + b^2}$$ fenced math. \$!
 
 ### Tasks
 
