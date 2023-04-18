@@ -2,7 +2,7 @@
 layout: post
 title:  "Fast Geodesic Distance Evaluation"
 date:   2020-09-20 20:20:17 +0200
-categories: geometry
+categories: geometry algorithm
 ---
 
 If we have one point A on the surface of a mesh, the geodesic distance to another point B also on the surface of mesh, is the length of the shortest path joining A to B, while still walking always over the surface of the mesh. Joining all the points which are at the same geodesic distance from a point creates the isolines of the following imagen:

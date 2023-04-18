@@ -15,12 +15,13 @@ Later on, I realized there is an much simpler and precise way to obtain this dir
 
 $$ \vec{f} = \vec{ v } \times \vec{p} $$
 
-Remember to normalize the result.
-
 In my c++ code:
 
 ```c++
 
-    VEC3 local_forward = VEC3( q.x, q.y, q.z ).Cross( p ).Normalized();
+    VEC3 f = VEC3( q.x, q.y, q.z ).Cross( p ).Normalized();
 
 ```
+
+Remember to normalize the result.
+
