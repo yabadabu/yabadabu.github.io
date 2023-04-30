@@ -7,7 +7,7 @@ categories: geometry algorithm
 
 If we have one point A on the surface of a mesh, the geodesic distance to another point B also on the surface of mesh, is the length of the shortest path joining A to B, while still walking always over the surface of the mesh. Joining all the points which are at the same geodesic distance from a point creates the isolines of the following imagen:
 
-![Results](/assets/images/geodesic_result04.png){:class="img-responsive"}
+![Results](/assets/images/geodesic_result04.png){:.centered}
 
 Although some techniques already exists, I'm going to present my own algorithm which returns the exact geodesic distance. In runs on top of the half edge mesh structure, which defines an array of 3D vertices, edges and faces (not necessarily triangles, but convex polygons).
 
@@ -56,13 +56,13 @@ The idea is that the distance goes from to 0 to N units, we want to render a bla
 
 If we follow the previous algorithm with a simple grid, starting from one corner and use the previous shader we get something like:
 
-![Results](/assets/images/geodesic_00.png){:class="img-responsive"}
+![Results](/assets/images/geodesic_00.png){:.centered}
 
 Opps!, as you can see, the distances are not correct!!, in such simple mesh the correct answer are some circular rings around the corner A.
 
 In the following image we can see the problem on a simple two faces mesh.
 
-![Results](/assets/images/geodesic_02.png){:class="img-responsive"}
+![Results](/assets/images/geodesic_02.png){:.centered}
 
 The shortest distance from A to D is not obtained by going through B or C, but by going straight from A to D. But A is not in the same polygon!!, probably not even the same plane!! and later on, the original A is going to be far away. We want to compute the distance to A on each vertex based on the computations from previous near vertices. So the problem becomes: 
 
@@ -73,7 +73,7 @@ What we are going to do is find an alternative A', and solve the problem in a si
 2. Add another circle of radius d(C) centered at C. 
 3. These two circles intersect at two points in the plane BCD. Both defines a potencial position A', that makes B and C have their distances, the other is the same position reflected around the line defined by B and C. 
 
-![Results](/assets/images/geodesic_04.png){:class="img-responsive"}
+![Results](/assets/images/geodesic_04.png){:.centered}
 
 We are interested in the solution that is not in the same side as D, as per construction the original A is far from D than it is from B or C. Also, this A' is not the original A, it's an equivalent position on the plane BCD that we can use to find if a shorter distance between the original A and D exists. 
 
@@ -101,7 +101,7 @@ and then find if x exists:
 
 $$x = \pm\sqrt{r_b^2 - y^2}$$
 
-Transform D to this 2D coordinate system and call it $d$. 
+Transform D to this 2D coordinate system and call it $$d$$.
 * Y = in the unit vector from B to C
 * Z = The Normal of the plane BCD
 * X = cross(Y,Z)
@@ -134,7 +134,7 @@ Back to the algorithm, start from the wrong approximation, and check if using th
 
 This is the result with the distance properly calculated.
 
-![My image Name](/assets/images/geodesic_01.png){:class="img-responsive"}
+![My image Name](/assets/images/geodesic_01.png){:.centered}
 
 There is a visible artifact inside the first face close to A. This is due to pixel shader interpolation, as I'm rendering two triangles per quad, and I'm evaluating the distance at each vertex.
 
@@ -142,7 +142,7 @@ There is a visible artifact inside the first face close to A. This is due to pix
 
 To need to find the distance from A to D in this mesh on the left, we instead solve the equivalent problem in the mesh on the right. We are not rotating the plane, we reconstruct a position A' in the plane BCD and knowing the d(B) and d(C) find d(D)
 
-![My image Name](/assets/images/geodesic_05.png){:class="img-responsive"}
+![My image Name](/assets/images/geodesic_05.png){:.centered}
 
 ## How fast is this algorithm?
 
@@ -160,8 +160,8 @@ Some timings for 3 different models for a single thread
 
 Now the mandatory images of the results:
 
-![My image Name](/assets/images/geodesic_result00.png){:class="img-responsive"}
-![My image Name](/assets/images/geodesic_result01.png){:class="img-responsive"}
-![My image Name](/assets/images/geodesic_result02.png){:class="img-responsive"}
-![My image Name](/assets/images/geodesic_result03.png){:class="img-responsive"}
-![My image Name](/assets/images/geodesic_result04.png){:class="img-responsive"}
+![My image Name](/assets/images/geodesic_result00.png){:.centered}
+![My image Name](/assets/images/geodesic_result01.png){:.centered}
+![My image Name](/assets/images/geodesic_result02.png){:.centered}
+![My image Name](/assets/images/geodesic_result03.png){:.centered}
+![My image Name](/assets/images/geodesic_result04.png){:.centered}
